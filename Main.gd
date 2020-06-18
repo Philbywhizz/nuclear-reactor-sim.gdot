@@ -53,10 +53,67 @@ var total_damage := 0						# DMGE
 
 
 func _ready() -> void:
+	do_maintenance()
 	pass
 
 
 # -[ built in virtual methods ]--------------------------------------------------------------------
 # -[ public methods ]------------------------------------------------------------------------------
+
+
+func do_maintenance() -> void:
+	# reset fluid levels
+	emergency_level = 300
+	primary_level = 120
+	secondary_level = 120
+
+	# Calculate quality
+	primary_quality = 1	# default is 1st class workmanship
+	if rand_range(0.0, 1.0) > 0.57: # 43% chance of 2nd class workmanship
+		primary_quality += 1
+	if rand_range(0.0, 1.0) > 0.95: # 5% chance of 3rd class workmanshop
+		primary_quality += 1
+	secondary_quality = 1 # default is 1st class workmanship
+	if rand_range(0.0, 1.0) > 0.57: # 43% chance of 2nd class workmanship
+		secondary_quality += 1
+	if rand_range(0.0, 1.0) > 0.95: # 5% chance of 3rd class workmanship
+		secondary_quality += 1
+
+	# reset temperatures
+	reactor_temperature = 25
+	reactor_previous_temperature = 25
+	exchange_temperature = 25
+	exchange_previous_temperature = 25
+	tower_temperature = 25
+	tower_previous_temp = 25
+
+	# Calculate total damage
+	total_damage = (2 * reactor_damage) + emergency_damage + primary_damage + exchange_damage + secondary_damage + generator_damage
+
+	# Calculate maintenance days
+	# TODO!!
+
+	day_number += maintenance_days
+	previous_day_number = day_number
+
+	# Reset damage
+	reactor_damage = 0
+	emergency_damage = 0
+	primary_damage = 0
+	exchange_damage = 0
+	secondary_damage = 0
+	generator_damage = 0
+	primary_failure = 0
+	secondary_failure = 0
+	exchange_failure = 0
+	generator_failure = 0
+	emergency_flow = 0
+	primary_flow = 0
+	secondary_flow = 0
+
+	# reset current generator production
+	generator_production = 0
+
+
 # -[ private methods ]-----------------------------------------------------------------------------
 
