@@ -10,47 +10,47 @@ extends Node2D
 # -[ constants ]-----------------------------------------------------------------------------------
 # -[ exported variables ]--------------------------------------------------------------------------
 # -[ public variables ]----------------------------------------------------------------------------
-var emergency_level := 300					# EV
-var emergency_damage := 0					# ED
-var emergency_heat := 0						# EH
-var emergency_flow := 0						# EF
-var primary_level := 120 					# PV
-var primary_quality := 1 					# QP
-var primary_damage := 0						# PD
-var primary_failure := 0 					# PB
-var primary_flow := 0						# PF
-var primary_heat := 0						# PH
-var secondary_level := 120					# SV
-var secondary_quality := 1 					# QS
-var secondary_damage := 0					# SD
-var secondary_failure := 0					# SB
-var secondary_flow := 0						# SF
-var secondary_heat := 0						# SH
-var control_rod_position := 0				# A
-var control_rod_position_prev_1 := 0 		# A1
-var control_rod_position_prev_2 := 0 		# A2
-var reactor_heat := 0						# RH
-var reactor_level := 0						# RL
-var reactor_temperature := 25				# RT
-var reactor_previous_temperature := 25		# T7
-var reactor_damage := 0						# RD
-var exchange_temperature := 25				# XT
-var exchange_previous_temperature := 25		# T8
-var exchange_damage := 0 					# TD
-var exchange_failure := 0					# TB
-var tower_temperature := 25					# CT
-var tower_previous_temp := 25				# T9
-var generator_damage := 0					# GD
-var generator_failure := 0					# GB
-var generator_production := 0				# GZ
-var kilowatt_average := 0					# KW
-var kilowatt_value := 0						# VE
-var day_number := 0							# DAY
-var previous_day_number := 0 				# D4
-var maintenance_days := 0					# MD
-var total_damage := 0 						# DMGE
-var fuel_remaining := 100					# FL
-var total_generation := 0					# TT
+var emergency_level = 300					# EV
+var emergency_damage = 0					# ED
+var emergency_heat = 0						# EH
+var emergency_flow = 0						# EF
+var primary_level = 120 					# PV
+var primary_quality = 1 					# QP
+var primary_damage = 0						# PD
+var primary_failure = 0 					# PB
+var primary_flow = 0						# PF
+var primary_heat = 0						# PH
+var secondary_level = 120					# SV
+var secondary_quality = 1 					# QS
+var secondary_damage = 0					# SD
+var secondary_failure = 0					# SB
+var secondary_flow = 0						# SF
+var secondary_heat = 0						# SH
+var control_rod_position = 0				# A
+var control_rod_position_prev_1 = 0 		# A1
+var control_rod_position_prev_2 = 0 		# A2
+var reactor_heat = 0						# RH
+var reactor_level = 0						# RL
+var reactor_temperature = 25				# RT
+var reactor_previous_temperature = 25		# T7
+var reactor_damage = 0						# RD
+var exchange_temperature = 25				# XT
+var exchange_previous_temperature = 25		# T8
+var exchange_damage = 0 					# TD
+var exchange_failure = 0					# TB
+var tower_temperature = 25					# CT
+var tower_previous_temp = 25				# T9
+var generator_damage = 0					# GD
+var generator_failure = 0					# GB
+var generator_production = 0				# GZ
+var kilowatt_average = 0					# KW
+var kilowatt_value = 0						# VE
+var day_number = 0							# DAY
+var previous_day_number = 0 				# D4
+var maintenance_days = 0					# MD
+var total_damage = 0 						# DMGE
+var fuel_remaining = 100					# FL
+var total_generation = 0					# TT
 
 # -[ private variables ]---------------------------------------------------------------------------
 # -[ onready variables ]---------------------------------------------------------------------------
@@ -69,8 +69,8 @@ func _ready() -> void:
 	# Temp set some settings
 	control_rod_position = 50
 	emergency_flow = 0
-	primary_flow = 75
-	secondary_flow = 75
+	primary_flow = 0
+	secondary_flow = 0
 	daily_operations()
 	do_status_report()
 	dump_report()
@@ -270,7 +270,9 @@ func dump_report() -> void:
 
 func daily_operations() -> void:
 	# Calculate Emergency coolant system
-	emergency_level -= emergency_flow - 2 * emergency_damage
+	emergency_level -= emergency_flow
+	if emergency_damage > 3:
+		emergency_level -= 2 * emergency_damage
 
 	# Calculate leakage probabilities for primary coolant
 	match primary_quality:
