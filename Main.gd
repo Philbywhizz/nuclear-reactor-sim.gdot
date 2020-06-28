@@ -31,7 +31,7 @@ var control_rod_position_prev_1 = 0 		# A1
 var control_rod_position_prev_2 = 0 		# A2
 var reactor_heat = 0						# RH
 var reactor_level = 0						# RL
-var reactor_temperature = 25				# RT
+var reactor_temperature = 0					# RT
 var reactor_previous_temperature = 25		# T7
 var reactor_damage = 0						# RD
 var exchange_temperature = 25				# XT
@@ -54,6 +54,7 @@ var total_generation = 0					# TT
 
 # -[ private variables ]---------------------------------------------------------------------------
 # -[ onready variables ]---------------------------------------------------------------------------
+onready var reactor = $Reactor
 
 # =[ METHODS: ]====================================================================================
 
