@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/UI-Font.tres" type="DynamicFont" id=1]
+
+[node name="PrimaryCoolantSlider" type="Control"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+rect_min_size = Vector2( 150, 250 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+margin_right = 150.0
+margin_bottom = 37.0
+custom_fonts/font = ExtResource( 1 )
+text = "Primary
+Coolant Flow"
+align = 1
+
+[node name="VSlider" type="VSlider" parent="VBoxContainer"]
+margin_left = 67.0
+margin_top = 41.0
+margin_right = 83.0
+margin_bottom = 208.0
+rect_min_size = Vector2( 16, 150 )
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+tick_count = 10
+
+[node name="Value" type="Label" parent="VBoxContainer"]
+margin_top = 212.0
+margin_right = 150.0
+margin_bottom = 229.0
+custom_fonts/font = ExtResource( 1 )
+text = "0 %"
+align = 1
+
+[node name="PreviousValue" type="Label" parent="VBoxContainer"]
+margin_top = 233.0
+margin_right = 150.0
+margin_bottom = 250.0
+custom_fonts/font = ExtResource( 1 )
+text = "0 %"
+align = 1
