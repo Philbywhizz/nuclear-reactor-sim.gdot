@@ -1,0 +1,704 @@
+[gd_scene format=2]
+
+[node name="UI" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 800, 600 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 793.0
+margin_bottom = 593.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OutputControls" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 6.0
+margin_right = 786.0
+margin_bottom = 326.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DailyReportPanel" type="PanelContainer" parent="VBoxContainer/OutputControls"]
+margin_left = 127.0
+margin_right = 391.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 250, 300 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxDailyReport" type="VBoxContainer" parent="VBoxContainer/OutputControls/DailyReportPanel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 257.0
+margin_bottom = 313.0
+rect_min_size = Vector2( 250, 300 )
+size_flags_horizontal = 9
+size_flags_vertical = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport"]
+margin_right = 250.0
+margin_bottom = 14.0
+text = "DAILY REPORT"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleSeperator" type="HSeparator" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport"]
+margin_top = 18.0
+margin_right = 250.0
+margin_bottom = 22.0
+
+[node name="DayNumber" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport"]
+margin_top = 26.0
+margin_right = 250.0
+margin_bottom = 40.0
+text = "Day number: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlRodPosition" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport"]
+margin_top = 44.0
+margin_right = 250.0
+margin_bottom = 58.0
+text = "Control Rod Position: 0%"
+
+[node name="Temperatures" type="HSeparator" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport"]
+margin_top = 62.0
+margin_right = 250.0
+margin_bottom = 66.0
+
+[node name="HBoxTemperatures" type="HBoxContainer" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport"]
+margin_top = 70.0
+margin_right = 250.0
+margin_bottom = 138.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxLabels" type="VBoxContainer" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures"]
+margin_right = 93.0
+margin_bottom = 68.0
+
+[node name="Title" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures/VBoxLabels"]
+margin_right = 93.0
+margin_bottom = 14.0
+text = "Temperatures:"
+
+[node name="Reactor" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures/VBoxLabels"]
+margin_top = 18.0
+margin_right = 93.0
+margin_bottom = 32.0
+text = "Reactor"
+
+[node name="HeatExchange" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures/VBoxLabels"]
+margin_top = 36.0
+margin_right = 93.0
+margin_bottom = 50.0
+text = "Heat Exchange"
+
+[node name="CoolingTower" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures/VBoxLabels"]
+margin_top = 54.0
+margin_right = 93.0
+margin_bottom = 68.0
+text = "Cooling Tower"
+
+[node name="VBoxMax" type="VBoxContainer" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures"]
+margin_left = 97.0
+margin_right = 126.0
+margin_bottom = 68.0
+
+[node name="Title" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures/VBoxMax"]
+margin_right = 29.0
+margin_bottom = 14.0
+text = "MAX"
+
+[node name="Reactor" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures/VBoxMax"]
+margin_top = 18.0
+margin_right = 29.0
+margin_bottom = 32.0
+text = "800"
+align = 2
+
+[node name="HeatExchange" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures/VBoxMax"]
+margin_top = 36.0
+margin_right = 29.0
+margin_bottom = 50.0
+text = "500"
+align = 2
+
+[node name="CoolingTower" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures/VBoxMax"]
+margin_top = 54.0
+margin_right = 29.0
+margin_bottom = 68.0
+text = "300"
+align = 2
+
+[node name="VBoxChange" type="VBoxContainer" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures"]
+margin_left = 130.0
+margin_right = 184.0
+margin_bottom = 68.0
+
+[node name="Title" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures/VBoxChange"]
+margin_right = 54.0
+margin_bottom = 14.0
+text = "CHANGE"
+
+[node name="Reactor" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures/VBoxChange"]
+margin_top = 18.0
+margin_right = 54.0
+margin_bottom = 32.0
+text = "0"
+align = 2
+
+[node name="HeatExchange" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures/VBoxChange"]
+margin_top = 36.0
+margin_right = 54.0
+margin_bottom = 50.0
+text = "0"
+align = 2
+
+[node name="Cooling Tower" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures/VBoxChange"]
+margin_top = 54.0
+margin_right = 54.0
+margin_bottom = 68.0
+text = "0"
+align = 2
+
+[node name="VBoxNow" type="VBoxContainer" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures"]
+margin_left = 188.0
+margin_right = 222.0
+margin_bottom = 68.0
+
+[node name="Title" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures/VBoxNow"]
+margin_right = 34.0
+margin_bottom = 14.0
+text = "NOW"
+
+[node name="Reactor" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures/VBoxNow"]
+margin_top = 18.0
+margin_right = 34.0
+margin_bottom = 32.0
+text = "25"
+align = 2
+
+[node name="HeatExchange" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures/VBoxNow"]
+margin_top = 36.0
+margin_right = 34.0
+margin_bottom = 50.0
+text = "25"
+align = 2
+
+[node name="CoolingTower" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxTemperatures/VBoxNow"]
+margin_top = 54.0
+margin_right = 34.0
+margin_bottom = 68.0
+text = "25"
+align = 2
+
+[node name="Outputs" type="HSeparator" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport"]
+margin_top = 142.0
+margin_right = 250.0
+margin_bottom = 146.0
+
+[node name="HBoxOutputs" type="HBoxContainer" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport"]
+margin_top = 150.0
+margin_right = 250.0
+margin_bottom = 200.0
+
+[node name="VBoxLabels" type="VBoxContainer" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxOutputs"]
+margin_right = 166.0
+margin_bottom = 50.0
+
+[node name="PowerOutput" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxOutputs/VBoxLabels"]
+margin_right = 166.0
+margin_bottom = 14.0
+text = "Power output (Max 2000):"
+align = 2
+
+[node name="AveragePowerOutput" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxOutputs/VBoxLabels"]
+margin_top = 18.0
+margin_right = 166.0
+margin_bottom = 32.0
+text = "Average power output:"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ValueEnergyProduced" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxOutputs/VBoxLabels"]
+margin_top = 36.0
+margin_right = 166.0
+margin_bottom = 50.0
+text = "Value of energy produced:"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxValues" type="VBoxContainer" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxOutputs"]
+margin_left = 170.0
+margin_right = 202.0
+margin_bottom = 50.0
+
+[node name="PowerOutput" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxOutputs/VBoxValues"]
+margin_right = 32.0
+margin_bottom = 14.0
+text = "0 kW"
+
+[node name="AveragePower" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxOutputs/VBoxValues"]
+margin_top = 18.0
+margin_right = 32.0
+margin_bottom = 32.0
+text = "0 kW"
+
+[node name="ValueEnergyProduced" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxOutputs/VBoxValues"]
+margin_top = 36.0
+margin_right = 32.0
+margin_bottom = 50.0
+text = "$ 0"
+
+[node name="Coolants" type="HSeparator" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport"]
+margin_top = 204.0
+margin_right = 250.0
+margin_bottom = 208.0
+
+[node name="HBoxCoolants" type="HBoxContainer" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport"]
+margin_top = 212.0
+margin_right = 250.0
+margin_bottom = 280.0
+size_flags_horizontal = 3
+
+[node name="VBoxLabels" type="VBoxContainer" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants"]
+margin_right = 70.0
+margin_bottom = 68.0
+
+[node name="Title" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants/VBoxLabels"]
+margin_right = 70.0
+margin_bottom = 14.0
+text = "Coolants:"
+
+[node name="Emergency" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants/VBoxLabels"]
+margin_top = 18.0
+margin_right = 70.0
+margin_bottom = 32.0
+text = "Emergency"
+
+[node name="Primary" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants/VBoxLabels"]
+margin_top = 36.0
+margin_right = 70.0
+margin_bottom = 50.0
+text = "Primary"
+
+[node name="Secondary" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants/VBoxLabels"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 68.0
+text = "Secondary"
+
+[node name="VBoxLevels" type="VBoxContainer" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants"]
+margin_left = 74.0
+margin_right = 110.0
+margin_bottom = 68.0
+
+[node name="Title" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants/VBoxLevels"]
+margin_right = 36.0
+margin_bottom = 14.0
+text = "LEVEL"
+
+[node name="Emergency" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants/VBoxLevels"]
+margin_top = 18.0
+margin_right = 36.0
+margin_bottom = 32.0
+text = "300"
+align = 2
+
+[node name="Primary" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants/VBoxLevels"]
+margin_top = 36.0
+margin_right = 36.0
+margin_bottom = 50.0
+text = "120"
+align = 2
+
+[node name="Secondary" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants/VBoxLevels"]
+margin_top = 54.0
+margin_right = 36.0
+margin_bottom = 68.0
+text = "120"
+align = 2
+
+[node name="VBoxLeakage" type="VBoxContainer" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants"]
+margin_left = 114.0
+margin_right = 171.0
+margin_bottom = 68.0
+
+[node name="Title" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants/VBoxLeakage"]
+margin_right = 57.0
+margin_bottom = 14.0
+text = "LEAKAGE"
+
+[node name="Emergency" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants/VBoxLeakage"]
+margin_top = 18.0
+margin_right = 57.0
+margin_bottom = 32.0
+text = "0/day"
+align = 2
+
+[node name="Primary" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants/VBoxLeakage"]
+margin_top = 36.0
+margin_right = 57.0
+margin_bottom = 50.0
+text = "0/day"
+align = 2
+
+[node name="Secondary" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants/VBoxLeakage"]
+margin_top = 54.0
+margin_right = 57.0
+margin_bottom = 68.0
+text = "0/day"
+align = 2
+
+[node name="VBoxFlow" type="VBoxContainer" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants"]
+margin_left = 175.0
+margin_right = 213.0
+margin_bottom = 68.0
+
+[node name="Title" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants/VBoxFlow"]
+margin_right = 38.0
+margin_bottom = 14.0
+text = "FLOW"
+
+[node name="Emergency" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants/VBoxFlow"]
+margin_top = 18.0
+margin_right = 38.0
+margin_bottom = 32.0
+text = "0"
+align = 2
+
+[node name="Primary" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants/VBoxFlow"]
+margin_top = 36.0
+margin_right = 38.0
+margin_bottom = 50.0
+text = "0"
+align = 2
+
+[node name="Secondary" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport/HBoxCoolants/VBoxFlow"]
+margin_top = 54.0
+margin_right = 38.0
+margin_bottom = 68.0
+text = "0"
+align = 2
+
+[node name="Fuel" type="HSeparator" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport"]
+margin_top = 284.0
+margin_right = 250.0
+margin_bottom = 288.0
+
+[node name="FuelRemaining" type="Label" parent="VBoxContainer/OutputControls/DailyReportPanel/VBoxDailyReport"]
+margin_top = 292.0
+margin_right = 250.0
+margin_bottom = 306.0
+text = "% Fuel remaining = 100"
+
+[node name="StatusReportPanel" type="PanelContainer" parent="VBoxContainer/OutputControls"]
+margin_left = 395.0
+margin_right = 659.0
+margin_bottom = 320.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/OutputControls/StatusReportPanel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 257.0
+margin_bottom = 313.0
+rect_min_size = Vector2( 250, 300 )
+
+[node name="Title" type="Label" parent="VBoxContainer/OutputControls/StatusReportPanel/VBoxContainer"]
+margin_right = 250.0
+margin_bottom = 14.0
+text = "STATUS REPORT"
+align = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/OutputControls/StatusReportPanel/VBoxContainer"]
+margin_top = 18.0
+margin_right = 250.0
+margin_bottom = 22.0
+
+[node name="WarningLabel" type="Label" parent="VBoxContainer/OutputControls/StatusReportPanel/VBoxContainer"]
+margin_top = 26.0
+margin_right = 250.0
+margin_bottom = 40.0
+text = "Warnings:"
+
+[node name="Warnings" type="Label" parent="VBoxContainer/OutputControls/StatusReportPanel/VBoxContainer"]
+margin_top = 44.0
+margin_right = 250.0
+margin_bottom = 58.0
+text = "- None"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/OutputControls/StatusReportPanel/VBoxContainer"]
+margin_top = 62.0
+margin_right = 250.0
+margin_bottom = 66.0
+
+[node name="DamageLabel" type="Label" parent="VBoxContainer/OutputControls/StatusReportPanel/VBoxContainer"]
+margin_top = 70.0
+margin_right = 250.0
+margin_bottom = 84.0
+text = "Damage:"
+
+[node name="Damage" type="Label" parent="VBoxContainer/OutputControls/StatusReportPanel/VBoxContainer"]
+margin_top = 88.0
+margin_right = 250.0
+margin_bottom = 102.0
+text = "- None"
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer/OutputControls/StatusReportPanel/VBoxContainer"]
+margin_top = 106.0
+margin_right = 250.0
+margin_bottom = 110.0
+
+[node name="InputControls" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 330.0
+margin_right = 786.0
+margin_bottom = 580.0
+alignment = 1
+
+[node name="HBoxControls" type="HBoxContainer" parent="VBoxContainer/InputControls"]
+margin_left = 143.0
+margin_right = 643.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 500, 250 )
+alignment = 1
+
+[node name="PanelControlRods" type="PanelContainer" parent="VBoxContainer/InputControls/HBoxControls"]
+margin_left = 29.0
+margin_right = 114.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 85, 0 )
+
+[node name="VBoxControlRods" type="VBoxContainer" parent="VBoxContainer/InputControls/HBoxControls/PanelControlRods"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 78.0
+margin_bottom = 243.0
+
+[node name="Title" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelControlRods/VBoxControlRods"]
+margin_right = 71.0
+margin_bottom = 31.0
+text = "Control
+Rods"
+align = 1
+
+[node name="VSlider" type="VSlider" parent="VBoxContainer/InputControls/HBoxControls/PanelControlRods/VBoxControlRods"]
+margin_left = 27.0
+margin_top = 35.0
+margin_right = 43.0
+margin_bottom = 200.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+rounded = true
+tick_count = 10
+ticks_on_borders = true
+
+[node name="Value" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelControlRods/VBoxControlRods"]
+margin_top = 204.0
+margin_right = 71.0
+margin_bottom = 218.0
+text = "0"
+align = 1
+
+[node name="PrevValue" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelControlRods/VBoxControlRods"]
+margin_top = 222.0
+margin_right = 71.0
+margin_bottom = 236.0
+text = "0"
+align = 1
+
+[node name="PanelEmergencyCoolant" type="PanelContainer" parent="VBoxContainer/InputControls/HBoxControls"]
+margin_left = 118.0
+margin_right = 203.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 85, 0 )
+
+[node name="VBoxEmergency" type="VBoxContainer" parent="VBoxContainer/InputControls/HBoxControls/PanelEmergencyCoolant"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 78.0
+margin_bottom = 243.0
+
+[node name="Title" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelEmergencyCoolant/VBoxEmergency"]
+margin_right = 71.0
+margin_bottom = 31.0
+text = "Emergency
+Coolant"
+align = 1
+
+[node name="VSlider" type="VSlider" parent="VBoxContainer/InputControls/HBoxControls/PanelEmergencyCoolant/VBoxEmergency"]
+margin_left = 27.0
+margin_top = 35.0
+margin_right = 43.0
+margin_bottom = 200.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+rounded = true
+tick_count = 10
+ticks_on_borders = true
+
+[node name="Value" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelEmergencyCoolant/VBoxEmergency"]
+margin_top = 204.0
+margin_right = 71.0
+margin_bottom = 218.0
+text = "0"
+align = 1
+
+[node name="PrevValue" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelEmergencyCoolant/VBoxEmergency"]
+margin_top = 222.0
+margin_right = 71.0
+margin_bottom = 236.0
+text = "0"
+align = 1
+
+[node name="PanelPrimaryCoolant" type="PanelContainer" parent="VBoxContainer/InputControls/HBoxControls"]
+margin_left = 207.0
+margin_right = 292.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 85, 0 )
+
+[node name="VBoxEmergency" type="VBoxContainer" parent="VBoxContainer/InputControls/HBoxControls/PanelPrimaryCoolant"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 78.0
+margin_bottom = 243.0
+
+[node name="Title" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelPrimaryCoolant/VBoxEmergency"]
+margin_right = 71.0
+margin_bottom = 31.0
+text = "Primary
+Coolant"
+align = 1
+
+[node name="VSlider" type="VSlider" parent="VBoxContainer/InputControls/HBoxControls/PanelPrimaryCoolant/VBoxEmergency"]
+margin_left = 27.0
+margin_top = 35.0
+margin_right = 43.0
+margin_bottom = 200.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+rounded = true
+tick_count = 10
+ticks_on_borders = true
+
+[node name="Value" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelPrimaryCoolant/VBoxEmergency"]
+margin_top = 204.0
+margin_right = 71.0
+margin_bottom = 218.0
+text = "0"
+align = 1
+
+[node name="PrevValue" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelPrimaryCoolant/VBoxEmergency"]
+margin_top = 222.0
+margin_right = 71.0
+margin_bottom = 236.0
+text = "0"
+align = 1
+
+[node name="PanelSecondaryCoolant" type="PanelContainer" parent="VBoxContainer/InputControls/HBoxControls"]
+margin_left = 296.0
+margin_right = 381.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 85, 0 )
+
+[node name="VBoxEmergency" type="VBoxContainer" parent="VBoxContainer/InputControls/HBoxControls/PanelSecondaryCoolant"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 78.0
+margin_bottom = 243.0
+
+[node name="Title" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelSecondaryCoolant/VBoxEmergency"]
+margin_right = 71.0
+margin_bottom = 31.0
+text = "Secondary
+Coolant"
+align = 1
+
+[node name="VSlider" type="VSlider" parent="VBoxContainer/InputControls/HBoxControls/PanelSecondaryCoolant/VBoxEmergency"]
+margin_left = 27.0
+margin_top = 35.0
+margin_right = 43.0
+margin_bottom = 200.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+rounded = true
+tick_count = 10
+ticks_on_borders = true
+
+[node name="Value" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelSecondaryCoolant/VBoxEmergency"]
+margin_top = 204.0
+margin_right = 71.0
+margin_bottom = 218.0
+text = "0"
+align = 1
+
+[node name="PrevValue" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelSecondaryCoolant/VBoxEmergency"]
+margin_top = 222.0
+margin_right = 71.0
+margin_bottom = 236.0
+text = "0"
+align = 1
+
+[node name="PanelButtons" type="PanelContainer" parent="VBoxContainer/InputControls/HBoxControls"]
+margin_left = 385.0
+margin_right = 470.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 85, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/InputControls/HBoxControls/PanelButtons"]
+margin_left = 7.0
+margin_top = 87.0
+margin_right = 78.0
+margin_bottom = 163.0
+size_flags_vertical = 4
+
+[node name="Commit" type="Button" parent="VBoxContainer/InputControls/HBoxControls/PanelButtons/VBoxContainer"]
+margin_right = 71.0
+margin_bottom = 20.0
+size_flags_vertical = 4
+text = "Commit"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/InputControls/HBoxControls/PanelButtons/VBoxContainer"]
+margin_top = 24.0
+margin_right = 71.0
+margin_bottom = 28.0
+
+[node name="Reset" type="Button" parent="VBoxContainer/InputControls/HBoxControls/PanelButtons/VBoxContainer"]
+margin_top = 32.0
+margin_right = 71.0
+margin_bottom = 52.0
+text = "Reset"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="VBoxContainer/InputControls/HBoxControls/PanelButtons/VBoxContainer"]
+margin_top = 56.0
+margin_right = 71.0
+margin_bottom = 76.0
+text = "Quit"
