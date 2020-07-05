@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://UI/UI-Font.tres" type="DynamicFont" id=1]
+[gd_scene format=2]
 
 [node name="EmergencyCoolantSlider" type="Control"]
 __meta__ = {
@@ -17,7 +15,6 @@ __meta__ = {
 margin_right = 150.0
 margin_bottom = 37.0
 rect_min_size = Vector2( 150, 0 )
-custom_fonts/font = ExtResource( 1 )
 text = "Emergency
 Coolant Flow"
 align = 1
@@ -37,7 +34,6 @@ tick_count = 10
 margin_top = 212.0
 margin_right = 150.0
 margin_bottom = 229.0
-custom_fonts/font = ExtResource( 1 )
 text = "0 %"
 align = 1
 
@@ -45,6 +41,5 @@ align = 1
 margin_top = 233.0
 margin_right = 150.0
 margin_bottom = 250.0
-custom_fonts/font = ExtResource( 1 )
 text = "0 %"
 align = 1
