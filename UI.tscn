@@ -1,9 +1,12 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI.gd" type="Script" id=1]
 
 [node name="UI" type="Control"]
 margin_right = 40.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 800, 600 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -702,3 +705,4 @@ margin_top = 56.0
 margin_right = 71.0
 margin_bottom = 76.0
 text = "Quit"
+[connection signal="pressed" from="VBoxContainer/InputControls/HBoxControls/PanelButtons/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
