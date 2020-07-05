@@ -14,3 +14,313 @@ margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="VBoxDailyReport" type="VBoxContainer" parent="UI"]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DayNumber" type="Label" parent="UI/VBoxDailyReport"]
+margin_right = 250.0
+margin_bottom = 14.0
+text = "Day number: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlRodPosition" type="Label" parent="UI/VBoxDailyReport"]
+margin_top = 18.0
+margin_right = 250.0
+margin_bottom = 32.0
+text = "Control Rod Position: 0%"
+
+[node name="Temperatures" type="HSeparator" parent="UI/VBoxDailyReport"]
+margin_top = 36.0
+margin_right = 250.0
+margin_bottom = 40.0
+
+[node name="HBoxTemperatures" type="HBoxContainer" parent="UI/VBoxDailyReport"]
+margin_top = 44.0
+margin_right = 250.0
+margin_bottom = 112.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxLabels" type="VBoxContainer" parent="UI/VBoxDailyReport/HBoxTemperatures"]
+margin_right = 93.0
+margin_bottom = 68.0
+
+[node name="Title" type="Label" parent="UI/VBoxDailyReport/HBoxTemperatures/VBoxLabels"]
+margin_right = 93.0
+margin_bottom = 14.0
+text = "Temperatures:"
+
+[node name="Reactor" type="Label" parent="UI/VBoxDailyReport/HBoxTemperatures/VBoxLabels"]
+margin_top = 18.0
+margin_right = 93.0
+margin_bottom = 32.0
+text = "Reactor"
+
+[node name="HeatExchange" type="Label" parent="UI/VBoxDailyReport/HBoxTemperatures/VBoxLabels"]
+margin_top = 36.0
+margin_right = 93.0
+margin_bottom = 50.0
+text = "Heat Exchange"
+
+[node name="CoolingTower" type="Label" parent="UI/VBoxDailyReport/HBoxTemperatures/VBoxLabels"]
+margin_top = 54.0
+margin_right = 93.0
+margin_bottom = 68.0
+text = "Cooling Tower"
+
+[node name="VBoxMax" type="VBoxContainer" parent="UI/VBoxDailyReport/HBoxTemperatures"]
+margin_left = 97.0
+margin_right = 126.0
+margin_bottom = 68.0
+
+[node name="Title" type="Label" parent="UI/VBoxDailyReport/HBoxTemperatures/VBoxMax"]
+margin_right = 29.0
+margin_bottom = 14.0
+text = "MAX"
+
+[node name="Reactor" type="Label" parent="UI/VBoxDailyReport/HBoxTemperatures/VBoxMax"]
+margin_top = 18.0
+margin_right = 29.0
+margin_bottom = 32.0
+text = "800"
+
+[node name="HeatExchange" type="Label" parent="UI/VBoxDailyReport/HBoxTemperatures/VBoxMax"]
+margin_top = 36.0
+margin_right = 29.0
+margin_bottom = 50.0
+text = "500"
+
+[node name="CoolingTower" type="Label" parent="UI/VBoxDailyReport/HBoxTemperatures/VBoxMax"]
+margin_top = 54.0
+margin_right = 29.0
+margin_bottom = 68.0
+text = "300"
+
+[node name="VBoxChange" type="VBoxContainer" parent="UI/VBoxDailyReport/HBoxTemperatures"]
+margin_left = 130.0
+margin_right = 184.0
+margin_bottom = 68.0
+
+[node name="Title" type="Label" parent="UI/VBoxDailyReport/HBoxTemperatures/VBoxChange"]
+margin_right = 54.0
+margin_bottom = 14.0
+text = "CHANGE"
+
+[node name="Reactor" type="Label" parent="UI/VBoxDailyReport/HBoxTemperatures/VBoxChange"]
+margin_top = 18.0
+margin_right = 54.0
+margin_bottom = 32.0
+text = "0"
+
+[node name="HeatExchange" type="Label" parent="UI/VBoxDailyReport/HBoxTemperatures/VBoxChange"]
+margin_top = 36.0
+margin_right = 54.0
+margin_bottom = 50.0
+text = "0"
+
+[node name="Cooling Tower" type="Label" parent="UI/VBoxDailyReport/HBoxTemperatures/VBoxChange"]
+margin_top = 54.0
+margin_right = 54.0
+margin_bottom = 68.0
+text = "0"
+
+[node name="VBoxNow" type="VBoxContainer" parent="UI/VBoxDailyReport/HBoxTemperatures"]
+margin_left = 188.0
+margin_right = 222.0
+margin_bottom = 68.0
+
+[node name="Title" type="Label" parent="UI/VBoxDailyReport/HBoxTemperatures/VBoxNow"]
+margin_right = 34.0
+margin_bottom = 14.0
+text = "NOW"
+
+[node name="Reactor" type="Label" parent="UI/VBoxDailyReport/HBoxTemperatures/VBoxNow"]
+margin_top = 18.0
+margin_right = 34.0
+margin_bottom = 32.0
+text = "25"
+
+[node name="HeatExchange" type="Label" parent="UI/VBoxDailyReport/HBoxTemperatures/VBoxNow"]
+margin_top = 36.0
+margin_right = 34.0
+margin_bottom = 50.0
+text = "25"
+
+[node name="CoolingTower" type="Label" parent="UI/VBoxDailyReport/HBoxTemperatures/VBoxNow"]
+margin_top = 54.0
+margin_right = 34.0
+margin_bottom = 68.0
+text = "25"
+
+[node name="Outputs" type="HSeparator" parent="UI/VBoxDailyReport"]
+margin_top = 116.0
+margin_right = 250.0
+margin_bottom = 120.0
+
+[node name="PowerOutput" type="Label" parent="UI/VBoxDailyReport"]
+margin_top = 124.0
+margin_right = 250.0
+margin_bottom = 138.0
+text = "Power output (Max 2000): 0 kW"
+
+[node name="AveragePowerOutput" type="Label" parent="UI/VBoxDailyReport"]
+margin_top = 142.0
+margin_right = 250.0
+margin_bottom = 156.0
+text = "Average power output: 0 kW"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ValueEnergyProduced" type="Label" parent="UI/VBoxDailyReport"]
+margin_top = 160.0
+margin_right = 250.0
+margin_bottom = 174.0
+text = "Value of energy produced: $ 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coolants" type="HSeparator" parent="UI/VBoxDailyReport"]
+margin_top = 178.0
+margin_right = 250.0
+margin_bottom = 182.0
+
+[node name="HBoxCoolants" type="HBoxContainer" parent="UI/VBoxDailyReport"]
+margin_top = 186.0
+margin_right = 250.0
+margin_bottom = 254.0
+size_flags_horizontal = 3
+
+[node name="VBoxLabels" type="VBoxContainer" parent="UI/VBoxDailyReport/HBoxCoolants"]
+margin_right = 70.0
+margin_bottom = 68.0
+
+[node name="Title" type="Label" parent="UI/VBoxDailyReport/HBoxCoolants/VBoxLabels"]
+margin_right = 70.0
+margin_bottom = 14.0
+text = "Coolants:"
+
+[node name="Emergency" type="Label" parent="UI/VBoxDailyReport/HBoxCoolants/VBoxLabels"]
+margin_top = 18.0
+margin_right = 70.0
+margin_bottom = 32.0
+text = "Emergency"
+
+[node name="Primary" type="Label" parent="UI/VBoxDailyReport/HBoxCoolants/VBoxLabels"]
+margin_top = 36.0
+margin_right = 70.0
+margin_bottom = 50.0
+text = "Primary"
+
+[node name="Secondary" type="Label" parent="UI/VBoxDailyReport/HBoxCoolants/VBoxLabels"]
+margin_top = 54.0
+margin_right = 70.0
+margin_bottom = 68.0
+text = "Secondary"
+
+[node name="VBoxLevels" type="VBoxContainer" parent="UI/VBoxDailyReport/HBoxCoolants"]
+margin_left = 74.0
+margin_right = 110.0
+margin_bottom = 68.0
+
+[node name="Title" type="Label" parent="UI/VBoxDailyReport/HBoxCoolants/VBoxLevels"]
+margin_right = 36.0
+margin_bottom = 14.0
+text = "LEVEL"
+
+[node name="Emergency" type="Label" parent="UI/VBoxDailyReport/HBoxCoolants/VBoxLevels"]
+margin_top = 18.0
+margin_right = 36.0
+margin_bottom = 32.0
+text = "300"
+
+[node name="Primary" type="Label" parent="UI/VBoxDailyReport/HBoxCoolants/VBoxLevels"]
+margin_top = 36.0
+margin_right = 36.0
+margin_bottom = 50.0
+text = "120"
+
+[node name="Secondary" type="Label" parent="UI/VBoxDailyReport/HBoxCoolants/VBoxLevels"]
+margin_top = 54.0
+margin_right = 36.0
+margin_bottom = 68.0
+text = "120"
+
+[node name="VBoxLeakage" type="VBoxContainer" parent="UI/VBoxDailyReport/HBoxCoolants"]
+margin_left = 114.0
+margin_right = 171.0
+margin_bottom = 68.0
+
+[node name="Title" type="Label" parent="UI/VBoxDailyReport/HBoxCoolants/VBoxLeakage"]
+margin_right = 57.0
+margin_bottom = 14.0
+text = "LEAKAGE"
+
+[node name="Emergency" type="Label" parent="UI/VBoxDailyReport/HBoxCoolants/VBoxLeakage"]
+margin_top = 18.0
+margin_right = 57.0
+margin_bottom = 32.0
+text = "0/day"
+
+[node name="Primary" type="Label" parent="UI/VBoxDailyReport/HBoxCoolants/VBoxLeakage"]
+margin_top = 36.0
+margin_right = 57.0
+margin_bottom = 50.0
+text = "0/day"
+
+[node name="Secondary" type="Label" parent="UI/VBoxDailyReport/HBoxCoolants/VBoxLeakage"]
+margin_top = 54.0
+margin_right = 57.0
+margin_bottom = 68.0
+text = "0/day"
+
+[node name="VBoxFlow" type="VBoxContainer" parent="UI/VBoxDailyReport/HBoxCoolants"]
+margin_left = 175.0
+margin_right = 213.0
+margin_bottom = 68.0
+
+[node name="Title" type="Label" parent="UI/VBoxDailyReport/HBoxCoolants/VBoxFlow"]
+margin_right = 38.0
+margin_bottom = 14.0
+text = "FLOW"
+
+[node name="Emergency" type="Label" parent="UI/VBoxDailyReport/HBoxCoolants/VBoxFlow"]
+margin_top = 18.0
+margin_right = 38.0
+margin_bottom = 32.0
+text = "0"
+
+[node name="Primary" type="Label" parent="UI/VBoxDailyReport/HBoxCoolants/VBoxFlow"]
+margin_top = 36.0
+margin_right = 38.0
+margin_bottom = 50.0
+text = "0"
+
+[node name="Secondary" type="Label" parent="UI/VBoxDailyReport/HBoxCoolants/VBoxFlow"]
+margin_top = 54.0
+margin_right = 38.0
+margin_bottom = 68.0
+text = "0"
+
+[node name="Fuel" type="HSeparator" parent="UI/VBoxDailyReport"]
+margin_top = 258.0
+margin_right = 250.0
+margin_bottom = 262.0
+
+[node name="FuelRemaining" type="Label" parent="UI/VBoxDailyReport"]
+margin_top = 266.0
+margin_right = 250.0
+margin_bottom = 280.0
+text = "% Fuel remaining = 100"
