@@ -20,7 +20,7 @@ var _slider_value = 0
 
 
 onready var value_label = $VBoxControls/Value
-
+onready var vslider = $VBoxControls/VSlider
 
 # =[ METHODS: ]====================================================================================
 
@@ -31,6 +31,10 @@ func _ready() -> void:
 
 # -[ built in virtual methods ]--------------------------------------------------------------------
 # -[ public methods ]------------------------------------------------------------------------------
+
+func reset_panel() -> void:
+	vslider.value = 0
+
 # -[ private methods ]-----------------------------------------------------------------------------
 
 

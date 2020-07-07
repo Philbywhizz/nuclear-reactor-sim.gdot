@@ -541,4 +541,5 @@ margin_top = 56.0
 margin_right = 71.0
 margin_bottom = 76.0
 text = "Quit"
+[connection signal="pressed" from="VBoxContainer/InputControls/HBoxControls/PanelButtons/VBoxContainer/Reset" to="." method="_on_Reset_pressed"]
 [connection signal="pressed" from="VBoxContainer/InputControls/HBoxControls/PanelButtons/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
