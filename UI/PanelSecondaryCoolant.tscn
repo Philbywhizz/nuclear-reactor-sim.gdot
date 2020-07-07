@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/PanelControls.gd" type="Script" id=1]
+
+[node name="PanelSecondaryCoolant" type="PanelContainer"]
+margin_left = 296.0
+margin_right = 381.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 85, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxControls" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 78.0
+margin_bottom = 243.0
+
+[node name="Title" type="Label" parent="VBoxControls"]
+margin_right = 71.0
+margin_bottom = 31.0
+text = "Secondary
+Coolant"
+align = 1
+
+[node name="VSlider" type="VSlider" parent="VBoxControls"]
+margin_left = 27.0
+margin_top = 35.0
+margin_right = 43.0
+margin_bottom = 200.0
+size_flags_horizontal = 4
+size_flags_vertical = 3
+rounded = true
+tick_count = 10
+ticks_on_borders = true
+
+[node name="Value" type="Label" parent="VBoxControls"]
+margin_top = 204.0
+margin_right = 71.0
+margin_bottom = 218.0
+text = "0"
+align = 1
+
+[node name="PrevValue" type="Label" parent="VBoxControls"]
+margin_top = 222.0
+margin_right = 71.0
+margin_bottom = 236.0
+text = "0"
+align = 1
+[connection signal="value_changed" from="VBoxControls/VSlider" to="." method="_on_VSlider_value_changed"]

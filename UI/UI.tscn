@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://UI.gd" type="Script" id=1]
+[ext_resource path="res://UI/UI.gd" type="Script" id=1]
+[ext_resource path="res://UI/PanelControlRods.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/PanelEmergencyCoolant.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/PanelPrimaryCoolant.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/PanelSecondaryCoolant.tscn" type="PackedScene" id=5]
 
 [node name="UI" type="Control"]
 margin_right = 40.0
@@ -491,181 +495,13 @@ margin_bottom = 250.0
 rect_min_size = Vector2( 500, 250 )
 alignment = 1
 
-[node name="PanelControlRods" type="PanelContainer" parent="VBoxContainer/InputControls/HBoxControls"]
-margin_left = 29.0
-margin_right = 114.0
-margin_bottom = 250.0
-rect_min_size = Vector2( 85, 0 )
+[node name="PanelControlRods" parent="VBoxContainer/InputControls/HBoxControls" instance=ExtResource( 2 )]
 
-[node name="VBoxControlRods" type="VBoxContainer" parent="VBoxContainer/InputControls/HBoxControls/PanelControlRods"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 78.0
-margin_bottom = 243.0
+[node name="PanelEmergencyCoolant" parent="VBoxContainer/InputControls/HBoxControls" instance=ExtResource( 3 )]
 
-[node name="Title" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelControlRods/VBoxControlRods"]
-margin_right = 71.0
-margin_bottom = 31.0
-text = "Control
-Rods"
-align = 1
+[node name="PanelPrimaryCoolant" parent="VBoxContainer/InputControls/HBoxControls" instance=ExtResource( 4 )]
 
-[node name="VSlider" type="VSlider" parent="VBoxContainer/InputControls/HBoxControls/PanelControlRods/VBoxControlRods"]
-margin_left = 27.0
-margin_top = 35.0
-margin_right = 43.0
-margin_bottom = 200.0
-size_flags_horizontal = 4
-size_flags_vertical = 3
-rounded = true
-tick_count = 10
-ticks_on_borders = true
-
-[node name="Value" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelControlRods/VBoxControlRods"]
-margin_top = 204.0
-margin_right = 71.0
-margin_bottom = 218.0
-text = "0"
-align = 1
-
-[node name="PrevValue" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelControlRods/VBoxControlRods"]
-margin_top = 222.0
-margin_right = 71.0
-margin_bottom = 236.0
-text = "0"
-align = 1
-
-[node name="PanelEmergencyCoolant" type="PanelContainer" parent="VBoxContainer/InputControls/HBoxControls"]
-margin_left = 118.0
-margin_right = 203.0
-margin_bottom = 250.0
-rect_min_size = Vector2( 85, 0 )
-
-[node name="VBoxEmergency" type="VBoxContainer" parent="VBoxContainer/InputControls/HBoxControls/PanelEmergencyCoolant"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 78.0
-margin_bottom = 243.0
-
-[node name="Title" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelEmergencyCoolant/VBoxEmergency"]
-margin_right = 71.0
-margin_bottom = 31.0
-text = "Emergency
-Coolant"
-align = 1
-
-[node name="VSlider" type="VSlider" parent="VBoxContainer/InputControls/HBoxControls/PanelEmergencyCoolant/VBoxEmergency"]
-margin_left = 27.0
-margin_top = 35.0
-margin_right = 43.0
-margin_bottom = 200.0
-size_flags_horizontal = 4
-size_flags_vertical = 3
-rounded = true
-tick_count = 10
-ticks_on_borders = true
-
-[node name="Value" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelEmergencyCoolant/VBoxEmergency"]
-margin_top = 204.0
-margin_right = 71.0
-margin_bottom = 218.0
-text = "0"
-align = 1
-
-[node name="PrevValue" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelEmergencyCoolant/VBoxEmergency"]
-margin_top = 222.0
-margin_right = 71.0
-margin_bottom = 236.0
-text = "0"
-align = 1
-
-[node name="PanelPrimaryCoolant" type="PanelContainer" parent="VBoxContainer/InputControls/HBoxControls"]
-margin_left = 207.0
-margin_right = 292.0
-margin_bottom = 250.0
-rect_min_size = Vector2( 85, 0 )
-
-[node name="VBoxEmergency" type="VBoxContainer" parent="VBoxContainer/InputControls/HBoxControls/PanelPrimaryCoolant"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 78.0
-margin_bottom = 243.0
-
-[node name="Title" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelPrimaryCoolant/VBoxEmergency"]
-margin_right = 71.0
-margin_bottom = 31.0
-text = "Primary
-Coolant"
-align = 1
-
-[node name="VSlider" type="VSlider" parent="VBoxContainer/InputControls/HBoxControls/PanelPrimaryCoolant/VBoxEmergency"]
-margin_left = 27.0
-margin_top = 35.0
-margin_right = 43.0
-margin_bottom = 200.0
-size_flags_horizontal = 4
-size_flags_vertical = 3
-rounded = true
-tick_count = 10
-ticks_on_borders = true
-
-[node name="Value" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelPrimaryCoolant/VBoxEmergency"]
-margin_top = 204.0
-margin_right = 71.0
-margin_bottom = 218.0
-text = "0"
-align = 1
-
-[node name="PrevValue" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelPrimaryCoolant/VBoxEmergency"]
-margin_top = 222.0
-margin_right = 71.0
-margin_bottom = 236.0
-text = "0"
-align = 1
-
-[node name="PanelSecondaryCoolant" type="PanelContainer" parent="VBoxContainer/InputControls/HBoxControls"]
-margin_left = 296.0
-margin_right = 381.0
-margin_bottom = 250.0
-rect_min_size = Vector2( 85, 0 )
-
-[node name="VBoxEmergency" type="VBoxContainer" parent="VBoxContainer/InputControls/HBoxControls/PanelSecondaryCoolant"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 78.0
-margin_bottom = 243.0
-
-[node name="Title" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelSecondaryCoolant/VBoxEmergency"]
-margin_right = 71.0
-margin_bottom = 31.0
-text = "Secondary
-Coolant"
-align = 1
-
-[node name="VSlider" type="VSlider" parent="VBoxContainer/InputControls/HBoxControls/PanelSecondaryCoolant/VBoxEmergency"]
-margin_left = 27.0
-margin_top = 35.0
-margin_right = 43.0
-margin_bottom = 200.0
-size_flags_horizontal = 4
-size_flags_vertical = 3
-rounded = true
-tick_count = 10
-ticks_on_borders = true
-
-[node name="Value" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelSecondaryCoolant/VBoxEmergency"]
-margin_top = 204.0
-margin_right = 71.0
-margin_bottom = 218.0
-text = "0"
-align = 1
-
-[node name="PrevValue" type="Label" parent="VBoxContainer/InputControls/HBoxControls/PanelSecondaryCoolant/VBoxEmergency"]
-margin_top = 222.0
-margin_right = 71.0
-margin_bottom = 236.0
-text = "0"
-align = 1
+[node name="PanelSecondaryCoolant" parent="VBoxContainer/InputControls/HBoxControls" instance=ExtResource( 5 )]
 
 [node name="PanelButtons" type="PanelContainer" parent="VBoxContainer/InputControls/HBoxControls"]
 margin_left = 385.0
